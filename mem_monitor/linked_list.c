@@ -181,7 +181,6 @@ int removeAt(struct LinkedList *list, unsigned int index) {
 	return 0;
 }
 
-// Remove's the first Node whose data matches the parameter, if it exists.
 int remove(struct LinkedList *list, void *data) {
 	struct Node *temp = list->head;
 	while (temp != NULL)
@@ -209,10 +208,7 @@ int remove(struct LinkedList *list, void *data) {
 	return 1;
 }
 
-// Remove's the first Node in the LinkedList.
-// O(1) complexity.
-void removeFirst(struct LinkedList *list)
-{
+void removeFirst(struct LinkedList *list) {
 	if (list->_size > 0)
 	{
 		if (list->_size == 1)
@@ -226,8 +222,6 @@ void removeFirst(struct LinkedList *list)
 	}
 }
 
-// Remove's the last Node in the LinkedList.
-// O(1) complexity.
 void removeLast(struct LinkedList *list) {
 	if (list->_size > 0)
 	{
@@ -242,8 +236,6 @@ void removeLast(struct LinkedList *list) {
 	}
 }
 
-// Prints out the LinkedList to the terminal window.
-// O(n) complexity.
 void print(struct LinkedList *list) {
 	printf("%c", '{');
 
@@ -259,8 +251,6 @@ void print(struct LinkedList *list) {
 	printf(" }\n");
 }
 
-// Copies a given LinkedList and returns the cloned version.
-// O(n) complexity.
 struct LinkedList* clone(struct LinkedList *list) {
 	if (list == NULL)
 		return NULL;
